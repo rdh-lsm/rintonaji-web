@@ -37,7 +37,7 @@
 
       <div class="box">
         <div class="image">
-          <img src="img/yum.jpg" alt="">
+          <img src="img/parking.jpeg" alt="">
         </div>
         <div class="box-content">
           <h2>Parking</h2>
@@ -67,7 +67,7 @@
 
       <div class="box">
         <div class="image">
-          <img src="img/yum.jpg" alt="">
+          <img src="img/bathroom.jpeg" alt="">
         </div>
         <div class="box-content">
           <h2>Bathrooms</h2>

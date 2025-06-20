@@ -35,9 +35,15 @@
         <h2>Villa Rintonaji</h2>
         <p>Take a break and escape the city noises<br>
           Reward yourself with natural silence</p>
-        <a href="/contact" class="btn">Book Now</a>
+        <a href="/contact" class="btn shake-occasionally">Book Now</a>
       </div>
 
+      <div class="video-overlay">
+        <video width="540" height="360" controls>
+        <source src="vid/rintonaji-vid.mp4" type="video/mp4">
+        </video> 
+      </div>
+      
     </section>
     {{-- home section end --}}
 

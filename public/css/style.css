@@ -95,18 +95,19 @@ header .fa-bars{
   display: none;
 }
 
-.home{
-  padding: 2rem 9%;
+.home {
+  position: relative;
   display: flex;
   align-items: center;
   min-height: 100vh;
-  color: white;
   background-image: url("/img/background.jpeg");
-  background-size: cover; 
-  background-repeat: no-repeat;
+  background-size: cover;
   background-position: center;
-  background-attachment: fixed; 
+  background-attachment: fixed;
+  padding: 2rem 9%;
+  color: white;
 }
+
 
 .home .content{
   max-width: 50em;
@@ -122,6 +123,27 @@ header .fa-bars{
   padding: 1rem 0;
   margin: auto;
   line-height: 1.1;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  width: 540px;
+  height: 360px;
+  max-width: 90%;
+  aspect-ratio: 16 / 9;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.video-overlay iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
 .facilities{
@@ -380,4 +402,68 @@ textarea{
   html{
     font-size: 80%;
   }
+}
+
+@keyframes shakeThenPauseWithSmoothFlash {
+  0%, 100% {
+    transform: translateX(0);
+    background-color: #254336;
+    color: white;
+  }
+  2%, 4% {
+    transform: translateX(-3px);
+  }
+  6%, 8% {
+    transform: translateX(3px);
+  }
+  10%, 12% {
+    transform: translateX(-3px);
+  }
+  14%, 16% {
+    transform: translateX(2px);
+  }
+  18% {
+    transform: translateX(0);
+  }
+
+  /* Fade to white */
+  20% {
+    background-color: #254336;
+    color: white;
+  }
+  30% {
+    background-color: #6a7b67;
+    color: #d2d2d2;
+  }
+  40% {
+    background-color: #ccc;
+    color: #666;
+  }
+  50% {
+    background-color: white;
+    color: black;
+  }
+
+  /* Fade back to green */
+  60% {
+    background-color: #ccc;
+    color: #666;
+  }
+  70% {
+    background-color: #6a7b67;
+    color: #d2d2d2;
+  }
+  80% {
+    background-color: #254336;
+    color: white;
+  }
+}
+
+.btn.shake-occasionally {
+  animation: shakeThenPauseWithSmoothFlash 7s ease-in-out infinite;
+  transition: background-color 0.8s ease, color 0.8s ease;
+}
+
+.btn.shake-occasionally:hover {
+  animation-play-state: running;
 }
